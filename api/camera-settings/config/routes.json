@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/camera-settings",
+      "handler": "camera-settings.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/camera-settings/count",
+      "handler": "camera-settings.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/camera-settings/:id",
+      "handler": "camera-settings.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/camera-settings",
+      "handler": "camera-settings.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/camera-settings/:id",
+      "handler": "camera-settings.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/camera-settings/:id",
+      "handler": "camera-settings.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

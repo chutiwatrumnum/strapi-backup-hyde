@@ -1,0 +1,86 @@
+{
+  "kind": "collectionType",
+  "collectionName": "addresses",
+  "info": {
+    "name": "addresses",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "address_number": {
+      "type": "string"
+    },
+    "floor": {
+      "type": "string"
+    },
+    "resident_lists": {
+      "via": "address",
+      "collection": "resident-list"
+    },
+    "users": {
+      "via": "address",
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "fixing_reports": {
+      "via": "address",
+      "collection": "fixing-reports"
+    },
+    "owner": {
+      "via": "owners",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "qr_parking": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload"
+    },
+    "Status_billpayment": {
+      "type": "boolean"
+    },
+    "payment": {
+      "via": "addresses",
+      "model": "payments"
+    },
+    "project": {
+      "via": "address",
+      "model": "projects"
+    },
+    "qr_code_open_gate": {
+      "type": "string",
+      "unique": false
+    },
+    "qr_code_smart_locker": {
+      "type": "string",
+      "unique": false
+    },
+    "room_number": {
+      "type": "string"
+    },
+    "room_type": {
+      "type": "string"
+    },
+    "inhabitants": {
+      "via": "inhabitant",
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "tenants": {
+      "via": "tenant",
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "ha_familyId": {
+      "type": "string"
+    }
+  }
+}

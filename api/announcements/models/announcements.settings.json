@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "announcements",
+  "info": {
+    "name": "Announcements",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title_name": {
+      "type": "string"
+    },
+    "announcer": {
+      "type": "string"
+    },
+    "post_status": {
+      "type": "enumeration",
+      "enum": [
+        "Published",
+        "Scheduled"
+      ]
+    },
+    "detail": {
+      "type": "richtext"
+    },
+    "date_announced": {
+      "type": "datetime"
+    },
+    "date_expired": {
+      "type": "datetime"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "Status_announcements": {
+      "type": "boolean"
+    },
+    "link": {
+      "type": "string"
+    },
+    "Status_announcements_noti": {
+      "type": "boolean"
+    }
+  }
+}

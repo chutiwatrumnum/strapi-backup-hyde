@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "camera_settings",
+  "info": {
+    "name": "camera_settings",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "multiple_camera": {
+      "type": "json"
+    },
+    "occupation_ref": {
+      "model": "occupations"
+    },
+    "serial_number": {
+      "type": "string"
+    }
+  }
+}

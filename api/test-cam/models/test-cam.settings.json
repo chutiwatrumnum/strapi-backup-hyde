@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "test_cams",
+  "info": {
+    "name": "Test_Cam",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "room": {
+      "type": "string",
+      "required": true
+    },
+    "count": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "occupations",
+  "info": {
+    "name": "Occupations",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "room_name": {
+      "type": "string"
+    },
+    "room_detail": {
+      "type": "string"
+    },
+    "low_status_people": {
+      "type": "integer"
+    },
+    "medium_status_people": {
+      "type": "integer"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "current_people": {
+      "type": "integer",
+      "default": 0,
+      "min": 0
+    },
+    "opened": {
+      "type": "time",
+      "required": false,
+      "default": "09:00:00"
+    },
+    "closed": {
+      "type": "time",
+      "required": false,
+      "default": "16:00:00"
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "scbsilps",
+  "info": {
+    "name": "SCBsilps",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "payeeProxyId": {
+      "type": "json"
+    },
+    "payeeProxyType": {
+      "type": "json"
+    },
+    "payeeAccountNumber": {
+      "type": "json"
+    },
+    "payeeName": {
+      "type": "json"
+    },
+    "payerProxyId": {
+      "type": "json"
+    },
+    "payerProxyType": {
+      "type": "json"
+    },
+    "payerAccountNumber": {
+      "type": "json"
+    },
+    "payerName": {
+      "type": "json"
+    },
+    "sendingBankCode": {
+      "type": "json"
+    },
+    "receivingBankCode": {
+      "type": "json"
+    },
+    "amount": {
+      "type": "json"
+    },
+    "channelCode": {
+      "type": "json"
+    },
+    "transactionId": {
+      "type": "json"
+    },
+    "transactionDateandTime": {
+      "type": "json"
+    },
+    "billPaymentRef1": {
+      "type": "json"
+    },
+    "billPaymentRef2": {
+      "type": "json"
+    },
+    "billPaymentRef3": {
+      "type": "json"
+    },
+    "currencyCode": {
+      "type": "json"
+    },
+    "transactionType": {
+      "type": "json"
+    }
+  }
+}

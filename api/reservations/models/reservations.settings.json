@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reservations",
+  "info": {
+    "name": "reservations",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "topic": {
+      "type": "string"
+    },
+    "startTime": {
+      "type": "datetime"
+    },
+    "stopTime": {
+      "type": "datetime"
+    },
+    "bookedBy": {
+      "type": "enumeration",
+      "enum": [
+        "Juristic",
+        "Resident"
+      ]
+    },
+    "note": {
+      "type": "text"
+    },
+    "users": {
+      "via": "reservations",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

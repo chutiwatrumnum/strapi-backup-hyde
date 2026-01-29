@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "facilities",
+  "info": {
+    "name": "facilities",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "maxHours": {
+      "type": "integer"
+    },
+    "maxReserves": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "text"
+    },
+    "accommodates": {
+      "type": "json"
+    },
+    "rules": {
+      "type": "json"
+    },
+    "dailyOpen": {
+      "type": "time"
+    },
+    "dailyClose": {
+      "type": "time"
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "icon": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

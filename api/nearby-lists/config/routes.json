@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/nearby-lists",
+      "handler": "nearby-lists.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/nearby-lists/count",
+      "handler": "nearby-lists.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/nearby-lists/:id",
+      "handler": "nearby-lists.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/nearby-lists",
+      "handler": "nearby-lists.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/nearby-lists/:id",
+      "handler": "nearby-lists.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/nearby-lists/:id",
+      "handler": "nearby-lists.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

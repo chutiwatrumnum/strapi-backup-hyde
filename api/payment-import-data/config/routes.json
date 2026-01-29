@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/payment-import-data",
+      "handler": "payment-import-data.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/payment-import-data/count",
+      "handler": "payment-import-data.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/payment-import-data/:id",
+      "handler": "payment-import-data.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/payment-import-data",
+      "handler": "payment-import-data.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/payment-import-data/:id",
+      "handler": "payment-import-data.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/payment-import-data/:id",
+      "handler": "payment-import-data.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

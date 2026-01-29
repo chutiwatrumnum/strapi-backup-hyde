@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "admin_manage_logs",
+  "info": {
+    "name": "Admin manage log"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "action": {
+      "type": "enumeration",
+      "enum": [
+        "create",
+        "delete"
+      ]
+    },
+    "actioner_name": {
+      "type": "string"
+    },
+    "patient_name": {
+      "type": "string"
+    },
+    "users_permissions_user": {
+      "via": "admin_manage_logs",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "actioner_email": {
+      "type": "string"
+    }
+  }
+}

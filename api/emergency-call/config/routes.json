@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/emergency-calls",
+      "handler": "emergency-call.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/emergency-calls/count",
+      "handler": "emergency-call.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/emergency-calls/:id",
+      "handler": "emergency-call.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/emergency-calls",
+      "handler": "emergency-call.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/emergency-calls/:id",
+      "handler": "emergency-call.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/emergency-calls/:id",
+      "handler": "emergency-call.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

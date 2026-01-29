@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nearby_types",
+  "info": {
+    "name": "Nearby Types",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "typeId": {
+      "type": "uid",
+      "targetField": "typeName"
+    },
+    "typeName": {
+      "type": "string"
+    },
+    "nearby_list": {
+      "model": "nearby-lists",
+      "via": "nearbyType",
+      "collection": "nearby-lists"
+    }
+  }
+}

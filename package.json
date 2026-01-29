@@ -1,0 +1,47 @@
+{
+  "name": "app",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "resolutions": {
+    "minimatch": "5.1.0"
+  },
+  "dependencies": {
+    "firebase-admin": "^11.0.1",
+    "moment": "^2.29.1",
+    "sendmail": "^1.6.1",
+    "socket.io": "^4.4.1",
+    "store": "^2.0.12",
+    "strapi": "3.6.8",
+    "strapi-admin": "3.6.8",
+    "strapi-connector-mongoose": "3.6.8",
+    "strapi-plugin-content-manager": "3.6.8",
+    "strapi-plugin-content-type-builder": "3.6.8",
+    "strapi-plugin-documentation": "3.6.8",
+    "strapi-plugin-email": "3.6.8",
+    "strapi-plugin-i18n": "3.6.8",
+    "strapi-plugin-upload": "3.6.8",
+    "strapi-plugin-users-permissions": "3.6.8",
+    "strapi-provider-email-nodemailer": "^3.6.10",
+    "strapi-provider-email-sendgrid": "^3.6.10",
+    "strapi-provider-email-sendmail": "^3.6.10",
+    "strapi-provider-email-smtp": "^1.0.3",
+    "strapi-utils": "3.6.8"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "8a841db4-5f0a-4f98-bca2-ba226f2dc002"
+  },
+  "engines": {
+    "node": ">=14.0.0 <=22.x.x"
+  },
+  "license": "MIT"
+}

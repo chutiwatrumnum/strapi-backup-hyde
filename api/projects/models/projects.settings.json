@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "projects",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "project_name": {
+      "type": "string"
+    },
+    "project_type": {
+      "type": "enumeration",
+      "enum": [
+        "Condo"
+      ]
+    },
+    "addresses": {
+      "collection": "addresses"
+    },
+    "users": {
+      "via": "project",
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "address": {
+      "via": "project",
+      "collection": "addresses"
+    },
+    "access_info": {
+      "type": "json"
+    },
+    "property_account": {
+      "type": "string"
+    },
+    "property_password": {
+      "type": "string"
+    },
+    "entrance_gate_mac": {
+      "type": "string"
+    },
+    "exit_gate_mac": {
+      "type": "string"
+    },
+    "id_beacon_1": {
+      "type": "string"
+    },
+    "id_beacon_2": {
+      "type": "string"
+    }
+  }
+}

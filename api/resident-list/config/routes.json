@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/resident-lists",
+      "handler": "resident-list.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/resident-lists/count",
+      "handler": "resident-list.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/resident-lists/:id",
+      "handler": "resident-list.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/resident-lists",
+      "handler": "resident-list.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/resident-lists/:id",
+      "handler": "resident-list.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/resident-lists/:id",
+      "handler": "resident-list.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "resident_lists",
+  "info": {
+    "name": "resident_list",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "address": {
+      "via": "resident_lists",
+      "model": "addresses"
+    },
+    "users_permissions_user": {
+      "via": "resident_lists",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "resident_role": {
+      "type": "enumeration",
+      "enum": [
+        "Owner",
+        "Inhabitant",
+        "Tenant"
+      ]
+    }
+  }
+}

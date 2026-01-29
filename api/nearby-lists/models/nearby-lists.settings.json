@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nearby_lists",
+  "info": {
+    "name": "Nearby Lists",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "namePlace": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "openHour": {
+      "type": "time"
+    },
+    "closeHour": {
+      "type": "time"
+    },
+    "facebook": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "ig": {
+      "type": "string"
+    },
+    "lineId": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "float"
+    },
+    "longitude": {
+      "type": "float"
+    },
+    "picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "nearbyType": {
+      "via": "nearby_list",
+      "model": "nearby-types"
+    }
+  }
+}

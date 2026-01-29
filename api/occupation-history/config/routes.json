@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/occupation-histories",
+      "handler": "occupation-history.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/occupation-histories/count",
+      "handler": "occupation-history.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/occupation-histories/:id",
+      "handler": "occupation-history.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/occupation-histories",
+      "handler": "occupation-history.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/occupation-histories/:id",
+      "handler": "occupation-history.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/occupation-histories/:id",
+      "handler": "occupation-history.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

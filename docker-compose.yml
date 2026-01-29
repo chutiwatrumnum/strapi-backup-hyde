@@ -1,0 +1,45 @@
+version: '3'
+services:
+  strapi:
+#    image: strapi/strapi
+    platform: linux/amd64
+    build: .
+    environment:
+      DATABASE_CLIENT: mongodb
+      DATABASE_NAME: strapi
+      DATABASE_HOST: mongo
+      DATABASE_PORT: 27017
+      DATABASE_USERNAME: strapi
+      DATABASE_PASSWORD: strapi
+    volumes:
+      - .:/srv/app
+    ports:
+      - '1337:1337'
+
+  mongo:
+    container_name: mongo
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: strapi
+    ports:
+      - '27017:27017'
+    volumes:
+      - ./mongo-data:/data/db
+#version: '3'
+#services:
+#  strapi:
+#    build: .
+#    environment:
+#      # Using Variable Subtitution to obtain environment variables. For more : https://docs.docker.com/compose/compose-file/compose-file-v3/#variable-substitution.
+#      NODE_ENV: ${NODE_ENV:-production}
+#      # == MongoDB Atlas configuration ==
+#      DATABASE_CLIENT: ${DATABASE_CLIENT}
+#      DATABASE_NAME: ${DATABASE_NAME}
+#      DATABASE_HOST: ${DATABASE_HOST}
+#      DATABASE_PORT: ${DATABASE_PORT}
+#      DATABASE_USERNAME: ${DATABASE_USERNAME}
+#      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+#    ports:
+#      - '${PORT:-1337}:1337'

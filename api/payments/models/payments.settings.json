@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payments",
+  "info": {
+    "name": "Payments",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "BillsPayment_Invoice": {
+      "type": "string"
+    },
+    "BillsPayment_Status": {
+      "type": "string"
+    },
+    "BillsPayment_Date_Start": {
+      "type": "date"
+    },
+    "BillsPayment_Date_End": {
+      "type": "date"
+    },
+    "BillsPayment_Update": {
+      "type": "date"
+    },
+    "Receipt_Status": {
+      "type": "boolean"
+    },
+    "Receipt_Status_Export": {
+      "type": "boolean"
+    },
+    "Total_BillsPayment": {
+      "type": "decimal"
+    },
+    "Name_Customer": {
+      "type": "string"
+    },
+    "BillsPayment_AllType": {
+      "type": "json"
+    },
+    "dua_date": {
+      "type": "string"
+    },
+    "address_id": {
+      "type": "string"
+    },
+    "receipt_image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "imageURL": {
+      "type": "string"
+    },
+    "addresses": {
+      "via": "payment",
+      "collection": "addresses"
+    },
+    "Address_Customer": {
+      "type": "string"
+    },
+    "annotation_payment": {
+      "type": "string"
+    },
+    "imageQR": {
+      "type": "string"
+    }
+  }
+}

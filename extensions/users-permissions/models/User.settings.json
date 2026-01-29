@@ -1,0 +1,232 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users-permissions_user",
+  "info": {
+    "name": "user",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "timestamps": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmationToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "model": "role",
+      "via": "users",
+      "plugin": "users-permissions",
+      "configurable": false
+    },
+    "fullname": {
+      "type": "string"
+    },
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "tel": {
+      "type": "string"
+    },
+    "lp_number": {
+      "type": "string"
+    },
+    "birth_day": {
+      "type": "date"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "avatar": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Male",
+        "Female"
+      ]
+    },
+    "nationality": {
+      "type": "string"
+    },
+    "id_number": {
+      "type": "string"
+    },
+    "passport_number": {
+      "type": "string"
+    },
+    "address": {
+      "via": "users",
+      "model": "addresses"
+    },
+    "resident_type": {
+      "type": "enumeration",
+      "enum": [
+        "Owner",
+        "Inhabitant",
+        "Tenant"
+      ]
+    },
+    "resident_class": {
+      "type": "enumeration",
+      "enum": [
+        "General",
+        "Privilege_1",
+        "Privilege_2",
+        "Privilege_3",
+        "Privilege_4",
+        "Privilege_5",
+        "Privilege_6",
+        "Privilege_7",
+        "Privilege_8"
+      ]
+    },
+    "vehicle_type": {
+      "type": "enumeration",
+      "enum": [
+        "Car",
+        "Bike"
+      ]
+    },
+    "project": {
+      "via": "users",
+      "model": "projects"
+    },
+    "fixing_reports": {
+      "via": "informer",
+      "collection": "fixing-reports"
+    },
+    "owners": {
+      "via": "owner",
+      "collection": "addresses"
+    },
+    "ha_username": {
+      "type": "string"
+    },
+    "ha_password": {
+      "type": "string",
+      "private": false
+    },
+    "gi_username": {
+      "type": "string"
+    },
+    "gi_password": {
+      "type": "string"
+    },
+    "resident_lists": {
+      "via": "users_permissions_user",
+      "collection": "resident-list"
+    },
+    "third_party_account": {
+      "type": "string"
+    },
+    "ha_uid": {
+      "type": "string"
+    },
+    "gi_uid": {
+      "type": "string"
+    },
+    "gi_sip": {
+      "type": "string"
+    },
+    "inhabitant": {
+      "via": "inhabitants",
+      "model": "addresses"
+    },
+    "tenant": {
+      "via": "tenants",
+      "model": "addresses"
+    },
+    "development_consent": {
+      "type": "boolean",
+      "default": false
+    },
+    "business_partner_consent": {
+      "type": "boolean",
+      "default": false
+    },
+    "last_consent_update": {
+      "type": "datetime"
+    },
+    "reservations": {
+      "via": "users",
+      "collection": "reservations"
+    },
+    "qr_code_open_gate": {
+      "type": "string",
+      "unique": false
+    },
+    "qr_code_smart_locker": {
+      "type": "string"
+    },
+    "current_address": {
+      "type": "text"
+    },
+    "admin_manage_logs": {
+      "via": "users_permissions_user",
+      "collection": "admin-manage-log"
+    }
+  }
+}

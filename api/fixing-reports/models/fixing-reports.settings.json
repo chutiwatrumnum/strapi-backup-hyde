@@ -1,0 +1,94 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fixing_reports",
+  "info": {
+    "name": "Fixing Reports",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "problem": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cause": {
+      "type": "text"
+    },
+    "solution": {
+      "type": "text"
+    },
+    "operator": {
+      "type": "string"
+    },
+    "address": {
+      "via": "fixing_reports",
+      "model": "addresses"
+    },
+    "informer": {
+      "via": "fixing_reports",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "image_pending": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "image_repairing": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "image_success": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "submission_date": {
+      "type": "datetime"
+    },
+    "pick_up_date": {
+      "type": "datetime"
+    },
+    "opening_date": {
+      "type": "datetime"
+    },
+    "closing_date": {
+      "type": "datetime"
+    },
+    "status": {
+      "type": "string"
+    },
+    "problem_other": {
+      "type": "string"
+    }
+  }
+}

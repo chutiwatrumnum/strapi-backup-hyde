@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/sc-bsilps",
+      "handler": "sc-bsilps.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/sc-bsilps/count",
+      "handler": "sc-bsilps.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/sc-bsilps/:id",
+      "handler": "sc-bsilps.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/sc-bsilps",
+      "handler": "sc-bsilps.sentSilpsSCB",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/sc-bsilps/:id",
+      "handler": "sc-bsilps.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/sc-bsilps/:id",
+      "handler": "sc-bsilps.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_import_data",
+  "info": {
+    "name": "Payment_import_data",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "date30": {
+      "type": "string"
+    },
+    "date60": {
+      "type": "string"
+    },
+    "date90": {
+      "type": "string"
+    },
+    "date120": {
+      "type": "string"
+    },
+    "more_than_120": {
+      "type": "string"
+    },
+    "outstanding": {
+      "type": "string"
+    },
+    "no_number": {
+      "type": "integer"
+    },
+    "Noti_Status": {
+      "type": "boolean"
+    },
+    "name_admin": {
+      "type": "string"
+    },
+    "date_of_end": {
+      "type": "string"
+    },
+    "not_overdue": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/occupations",
+      "handler": "occupations.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/occupations/count",
+      "handler": "occupations.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/occupations/:id",
+      "handler": "occupations.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/occupations",
+      "handler": "occupations.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/occupations/:id",
+      "handler": "occupations.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/occupations/:id",
+      "handler": "occupations.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

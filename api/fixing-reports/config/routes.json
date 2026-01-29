@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/fixing-reports",
+      "handler": "fixing-reports.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fixing-reports/count",
+      "handler": "fixing-reports.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/fixing-reports/:id",
+      "handler": "fixing-reports.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/fixing-reports",
+      "handler": "fixing-reports.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/fixing-reports/:id",
+      "handler": "fixing-reports.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/fixing-reports/:id",
+      "handler": "fixing-reports.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

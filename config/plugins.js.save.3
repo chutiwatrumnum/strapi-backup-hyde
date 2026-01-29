@@ -1,0 +1,19 @@
+module.exports = ({ env }) => ({
+  email: {
+    provider: "nodemailer",
+    providerOptions: {
+        host: 'mail.lifetstyletech.com',
+        port: 465,
+        secure: false,
+        //ignoreTLS:true,
+        auth: {
+          user: 'hydeheritage@grandeasset.com',
+          pass: 'Mar0818',
+        }
+    },
+    settings: {
+      defaultFrom: "hydeheritage@grandeasset.com",
+      defaultReplyTo: "hydeheritage@grandeasset.com",
+    },
+  },
+});

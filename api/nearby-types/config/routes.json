@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/nearby-types",
+      "handler": "nearby-types.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/nearby-types/count",
+      "handler": "nearby-types.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/nearby-types/:id",
+      "handler": "nearby-types.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/nearby-types",
+      "handler": "nearby-types.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/nearby-types/:id",
+      "handler": "nearby-types.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/nearby-types/:id",
+      "handler": "nearby-types.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_data",
+  "info": {
+    "name": "Payment-data",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Amount_water": {
+      "type": "float"
+    },
+    "Amount_common_fee": {
+      "type": "float"
+    },
+    "Date_table": {
+      "type": "date"
+    },
+    "Overdue": {
+      "type": "float"
+    },
+    "Total_BillsPayment_Dashboard": {
+      "type": "float"
+    },
+    "Count_Bills_Date": {
+      "type": "integer"
+    }
+  }
+}

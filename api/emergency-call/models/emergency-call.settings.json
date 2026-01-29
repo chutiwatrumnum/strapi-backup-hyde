@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "emergency_calls",
+  "info": {
+    "name": "Emergency Call"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "phoneNumber": {
+      "type": "string"
+    }
+  }
+}

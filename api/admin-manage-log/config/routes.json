@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/admin-manage-logs",
+      "handler": "admin-manage-log.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/admin-manage-logs/count",
+      "handler": "admin-manage-log.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/admin-manage-logs/:id",
+      "handler": "admin-manage-log.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/admin-manage-logs",
+      "handler": "admin-manage-log.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/admin-manage-logs/:id",
+      "handler": "admin-manage-log.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/admin-manage-logs/:id",
+      "handler": "admin-manage-log.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

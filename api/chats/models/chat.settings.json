@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chats",
+  "info": {
+    "name": "chats",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "room": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "sender_name": {
+      "type": "string"
+    },
+    "time": {
+      "type": "datetime"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "chat",
+        "image",
+        "file"
+      ]
+    },
+    "sender_id": {
+      "type": "string"
+    },
+    "fixing_info": {
+      "model": "fixing-reports"
+    },
+    "users_read": {
+      "type": "string"
+    },
+    "sender_role": {
+      "type": "string"
+    },
+    "room_info": {
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}
