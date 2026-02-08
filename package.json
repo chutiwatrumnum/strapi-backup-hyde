@@ -9,9 +9,6 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "resolutions": {
-    "minimatch": "5.1.0"
-  },
   "dependencies": {
     "firebase-admin": "^11.0.1",
     "moment": "^2.29.1",
@@ -41,7 +38,8 @@
     "uuid": "8a841db4-5f0a-4f98-bca2-ba226f2dc002"
   },
   "engines": {
-    "node": ">=14.0.0 <=22.x.x"
+    "node": ">=10.16.0 <=14.x.x",
+    "npm": "^6.0.0"
   },
   "license": "MIT"
 }
